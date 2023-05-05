@@ -1,3 +1,5 @@
+package Dia_2;
+
 import java.util.Arrays;
 
 public class Dia2 {
