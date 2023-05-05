@@ -1,3 +1,39 @@
+ * Diferença entre usar tipos primitivos em variáveis e classes Wrapper
+
+ Em Java, `int` e `Integer` têm funções diferentes, embora estejam relacionados. Aqui estão as principais diferenças entre os dois:
+
+ 1. Tipo primitivo vs. Classe de referência:
+
+ `int`: É um tipo primitivo de dados no Java, usado para armazenar números inteiros de 32 bits. Os tipos primitivos têm melhor desempenho em termos de alocação de memória e velocidade de processamento.
+
+ `Integer`: É uma classe de referência (Wrapper class) no pacote `java.lang`, que encapsula um valor `int` como um objeto. Essa classe oferece métodos úteis para trabalhar com números inteiros e é útil quando você precisa usar um `int` como um objeto, como em coleções ou quando passando como argumento para um método que espera um objeto.
+
+ 2. Valor padrão:
+
+ `int`: Quando uma variável `int` é declarada sem ser inicializada, ela recebe um valor padrão de 0 (zero).
+
+ `Integer`: Quando uma variável `Integer` é declarada sem ser inicializada, ela recebe um valor padrão de `null`, já que é um objeto.
+
+ 3. Autoboxing e Unboxing:
+
+ A partir do Java 5, o processo de conversão automática entre tipos primitivos e suas classes wrapper correspondentes foi introduzido, chamado de autoboxing (conversão automática de primitivo para objeto) e unboxing (conversão automática de objeto para primitivo).
+
+ Exemplo:
+
+ ```java
+ int primitiveInt = 10;
+ Integer integerObject = primitiveInt; // Autoboxing
+ int anotherPrimitiveInt = integerObject; // Unboxing
+ ```
+
+ 4. Métodos:
+
+ `int`: Como um tipo primitivo, não possui métodos próprios.
+
+ `Integer`: Como uma classe, possui diversos métodos úteis para manipular números inteiros, como `parseInt`, `valueOf`, `toString`, `compare` e outros.
+
+ Em resumo, `int` é um tipo primitivo mais rápido e eficiente em termos de memória para trabalhar com números inteiros, enquanto `Integer` é uma classe wrapper que oferece mais funcionalidades e a capacidade de ser usada como objeto em coleções e outros lugares onde objetos são necessários.
+
  * Tipos primitivos de variáveis:
  byte, short, int, long, float, double, char, boolean
 
@@ -6,5 +42,3 @@
  a ele através da classe (Classe.metodo)
 
  Método não estático eu preciso criar uma instância (objeto) para utilizá-lo
-
-
