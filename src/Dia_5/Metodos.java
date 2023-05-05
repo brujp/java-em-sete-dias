@@ -1,6 +1,8 @@
 package Dia_5;
 
-// Métodos estáticos basicamente eu não preciso instânciar esse cara, pois tenho acesso direto a ele
+// Métodos estáticos basicamente eu não preciso instânciar esse cara, pois tenho acesso direto
+// a ele através da classe (Classe.metodo)
+//Método não estático eu preciso criar uma instância (objeto) para utilizá-lo
 
 public class Metodos {
 
