@@ -11,13 +11,20 @@ public class DesafioDia3 {
         System.out.println("Digite um número: ");
         String numeroDigitado = sc.next();
 
-        if (numeroDigitado.length() == 1) {
-            System.out.println("Esse número tem " + numeroDigitado.length() + " dígito");
-        } else if (numeroDigitado.length() > 1 && numeroDigitado.length() <= 4) {
-            System.out.println("Esse número tem " + numeroDigitado.length() + " dígitos");
-        } else {
-            System.out.println("Esse número tem 5 dígitos ou mais");
+        try {
+            long numero = Long.parseLong(numeroDigitado);
+
+            if (numeroDigitado.length() == 1) {
+                System.out.println("Esse número tem " + numeroDigitado.length() + " dígito");
+            } else if (numeroDigitado.length() > 1 && numeroDigitado.length() <= 4) {
+                System.out.println("Esse número tem " + numeroDigitado.length() + " dígitos");
+            } else {
+                System.out.println("Esse número tem 5 dígitos ou mais");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("A entrada fornecida não é um número válido.");
         }
+
         sc.close();
     }
 }
