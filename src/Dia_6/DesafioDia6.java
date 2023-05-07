@@ -8,7 +8,7 @@ public class DesafioDia6 {
         car.setMarca("BMW");
         car.setModelo("X6");
         car.setAnoFabricacao(2024);
-        car.setValorDoCarro(125000);
+        car.setValorDoCarro(130000);
 
         System.out.println(car.getMarca());
         System.out.println(car.getModelo());
